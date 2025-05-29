@@ -13,7 +13,7 @@
 - Estruturas de repetição (`while`, `for`);
 - Funções;
 - Vetores (Arrays);
-- Matrizes;
+- Matrizes.
 
 ## 🚀 Como executar
 
