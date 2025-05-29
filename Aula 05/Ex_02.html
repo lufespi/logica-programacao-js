@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 6 - Exercício 2</title>
+    </head>
+
+    <body>
+        <h1>
+            Crie um algoritmo que leia um determinado valor, após exiba na tela se este é positivo ou negativo (considere o valor zero como positivo).
+        </h1>
+
+        <label>Insira um Valor:</label>
+        <input type="number" id="valor" name="valor" value="">
+        <input type="button" id="calcular" name="calcular" value="Calcular" onclick="calcularValores()">
+        
+        <script>
+            function calcularValores(){
+                var valorInformado = document.getElementById("valor").value;
+
+                if(valorInformado >= 0)
+                    alert("O valor " + valorInformado + " é: POSITIVO")
+                else
+                    alert("O valor " + valorInformado + " é: NEGATIVO") 
+            }
+        </script>
+    </body>
+</html>

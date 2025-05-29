@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 3 - Exercício 1</title> 
+    </head>
+
+    <body>
+        <h1>
+            Faça um programa que leia o nome de uma pessoa, a idade e a altura.
+            Após mostre uma mensagem informando esses dados para o usuário.
+            OBS: Essas informações devem estar armazenadas em variáveis.
+        </h1>
+        
+        <form>
+            <div> <!-- Tag DIV = Criar Divisões // Ocupa uma linha inteira  -->
+                <label>Nome:</label>
+                <input type="text" id="nome" name="nome" value="">
+            </div>
+            <div>
+                <label>Idade:</label>
+                <input type="text" id="idade" name="idade" value="">
+            </div>
+            <div>
+                <label>Altura:</label>
+                <input type="text" id="altura" name="altura" value="">
+            </div>
+            <div>
+                <input type="button" id="botao" name="botao" value="Exibir Dados" onclick="exibirDados()">
+            </div>
+        </form>
+
+        <script>
+            function exibirDados() {
+                // VAR = Variável global , LET = Váriavel para escopo de um único arquivo
+                var nome = document.getElementById("nome").value; 
+                var idade = document.getElementById("idade").value;
+                var altura = document.getElementById("altura").value;
+
+                // alert = Exibir caixa de alerta no navegador
+                alert("O meu nome é: " + nome + 
+                "\nA minha idade é: " + idade + 
+                "\nA minha altura é: " + altura);
+            }
+        </script>
+    </body>
+</html>

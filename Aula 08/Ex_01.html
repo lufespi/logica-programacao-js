@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 9 - Exercício 1</title>
+</head>
+
+<body>
+    <h1>
+        Escreva um programa para aprovar ou não o empréstimo bancário para a compra de uma casa. Deverá ser informado o
+        valor da casa, a renda do comprador e em quantos anos ele vai pagar.
+        Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% da renda, caso ultrapasse o empréstimo
+        será negado.
+    </h1>
+
+    <form>
+        <div>
+            <label>Valor da Casa:</label>
+            <input type="number" id="valorCasa" name="" value="">
+        </div>
+        <div>
+            <label>Renda Atual:</label>
+            <input type="number" id="rendaComprador" name="" value="">
+        </div>
+        <div>
+            <label>Em quantos anos vai pagar:</label>
+            <input type="number" id="tempoPrestacaoAnual" name="" value="">
+        </div>
+        <input type="button" id="botao" name="" value="Calcular" onclick="calcularEmprestimo()">
+    </form>
+
+    <script>
+        function calcularEmprestimo(){
+            var valorCasa = parseFloat(document.getElementById("valorCasa").value)
+            var rendaComprador = parseFloat(document.getElementById("rendaComprador").value)
+            var tempoPrestacaoAnual = parseFloat(document.getElementById("tempoPrestacaoAnual").value)
+
+            var prestacaoMensal = tempoPrestacaoAnual * (valorCasa / 12)
+            var emprestimo = 0
+
+            alert(prestacaoMensal)
+        }
+    </script>
+</body>
+
+</html>

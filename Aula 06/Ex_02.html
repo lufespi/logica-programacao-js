@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 7 - Exercício 2</title>
+</head>
+
+<body>
+    <h1>
+        Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+
+        Álcool: até 20 litros, desconto de 3% por litro
+        acima de 20 litros, desconto de 5% por litro
+
+        Gasolina até 20 litros, desconto de 4% por litro
+        acima de 20 litros, desconto de 6% por litro
+
+        Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado da seguinte forma:
+        A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da
+        gasolina é R$ 4,50 e o preço do litro do álcool é R$ 3,80.
+    </h1>
+    <form>
+        <div>
+            <label>Tipo de Combustível:</label>
+            <select name="" id="tipoCombustivel">
+                <option value="G">Gasolina</option>
+                <option value="A">Álcool</option>
+            </select>
+            <!-- <input type="text" id="tipoCombustivel" name="" value="" placeholder="Álcool | Gasolina"> -->
+        </div>
+        <div>
+            <label>Quantidade de Combustível:</label>
+            <input type="number" id="quantidadeCombustivel" name="" value="" placeholder="20  Litros">
+        </div>
+    </form>
+    <input type="button" id="calcular" name="" value="Calcular Desconto" onclick="calcularDesconto()">
+
+    <script>
+        function calcularDesconto() {
+            var tipoCombustivel = document.getElementById("tipoCombustivel").value;
+            var quantidadeCombustivel = document.getElementById("quantidadeCombustivel").value;
+
+            const valorAlcool = 3.8
+            const valorGasolina = 4.5
+            var desconto = 0
+            var valorCombustivel = 0
+
+            if (tipoCombustivel == "A") {
+                if (quantidadeCombustivel <= 20) {
+                    valorCombustivel = valorAlcool * quantidadeCombustivel
+                    desconto = 3
+                } else {
+                    valorCombustivel = valorAlcool * quantidadeCombustivel
+                    desconto = 5
+                }
+            } else {
+                if (quantidadeCombustivel <= 20) {
+                    valorCombustivel = valorGasolina * quantidadeCombustivel
+                    desconto = 4
+                } else {
+                    valorCombustivel = valorGasolina * quantidadeCombustivel
+                    desconto = 6
+                }
+            }
+            alert("Tipo de Combustível: " + tipoCombustivel +
+                "\nQuantidade: " + quantidadeCombustivel + " Litros" +
+                "\nValor: R$ " + valorCombustivel.toFixed(2) +
+                "\nDesconto: " + desconto + "%" +
+                "\nValor Total: R$ " + (valorCombustivel * (100 - desconto) / 100).toFixed(2))
+        }
+    </script>
+</body>
+</html>

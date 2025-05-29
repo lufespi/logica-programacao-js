@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 5 - Exercício 1</title>
+    </head>
+
+    <body>
+        <h1>
+            Escreva um algoritmo para ler o nome, o salário mensal atual de um funcionário e o percentual de reajuste.Calcular e escrever o nome, salário antigo e valor do novo salário.
+        </h1>
+
+        <form>
+            <div>
+                <label>Nome:</label>
+                <input type="text" id="nome" name="nome" value="">
+            </div>
+            <div>
+                <label>Salário Mensal:</label>
+                <input type="text" id="salarioAtual" name="salarioAtual" value="">
+            </div>
+            <div>
+                <label>Percentual de reajuste:</label>
+                <input type="text" id="percentual" name="percentual" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="calcular()">
+        </form>
+
+        <script>
+            function calcular(){
+                var nome = document.getElementById("nome").value;
+                var salarioAtual = parseFloat(document.getElementById("salarioAtual").value);
+                var percentual = parseFloat(document.getElementById("percentual").value);
+                var reajuste = (salarioAtual * percentual) / 100;
+                var salarioFinal = (salarioAtual + reajuste).toFixed(2);
+
+                alert("Nome: " + nome +
+                "\nAntigo Salário: R$ " + salarioAtual.toFixed(2) +
+                "\nNovo Salário R$ " + salarioFinal);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 3 - Exercício 4</title>
+    </head>
+
+    <body>
+        <h1>
+            Crie um algoritmo que leia um número decimal e mostre na tela o dobro desse valor e também a sua terça parte.
+            Ex:
+            Digite um número decimal: 7.5
+            O dobro de 7.5 é: 15
+            A terça parte de 7.5 é: 5
+        </h1>
+
+        <form>
+            <div>
+                <label>Digite um número decimal:</label>
+                <input type="text" id="numeroDecimal" name="numero" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="lerNumeroDecimal()">
+        </form>
+
+        <script>
+            function lerNumeroDecimal(){
+                var valor = parseFloat(document.getElementById("numeroDecimal").value).toFixed(1);
+                var dobroValor = (valor * 2).toFixed(1);
+                var tercaValor = (valor / 3).toFixed(1);
+
+                alert("O dobro de " + valor + " é: " + dobroValor +
+                "\nA terça parte de " + valor + " é: " + tercaValor + ".")
+            }
+        </script>
+    </body>
+</html>

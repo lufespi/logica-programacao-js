@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 4 - Exercício 3</title>
+    </head>
+
+    <body>
+        <h1>
+            Escreva um algoritmo para ler o nome de uma cidade, o número total de eleitores, o número de votos válidos, brancos e nulos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.
+        </h1>
+
+        <form>
+            <div>
+                <label>Insira o nome da Cidade:</label>
+                <input type="text" id="cidade" name="cidade" value="">
+            </div>
+            <div>
+                <label>Insira o total de Eleitores:</label>
+                <input type="text" id="eleitores" name="eleitores" value="">
+            </div>
+            <div>
+                <label>Insira o número de votos válidos:</label>
+                <input type="text" id="votosValidos" name="votosValidos" value="">
+            </div>
+            <div>
+                <label>Insira o número de votos brancos:</label>
+                <input type="text" id="votosBrancos" name="votosBrancos" value="">
+            </div>
+            <div>
+                <label>Insira o número de votos nulos:</label>
+                <input type="text" id="votosNulos" name="votosNulos" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="resultados()">          
+        </form>
+
+        <script>
+            function resultados(){
+                var cidade = document.getElementById("cidade").value;
+                var totalEleitores = document.getElementById("eleitores").value;
+                var validos = document.getElementById("votosValidos").value;
+                var brancos = document.getElementById("votosBrancos").value;
+                var nulos = document.getElementById("votosNulos").value;
+                var porcentagemValidos = (validos / totalEleitores * 100).toFixed(1);
+                var porcentagemBrancos = (brancos / totalEleitores * 100).toFixed(1);
+                var porcentagemNulos = (nulos / totalEleitores * 100).toFixed(1);
+
+
+                alert(cidade + " - Total de eleitores: " + totalEleitores + 
+                "\nVotos válidos: " + porcentagemValidos + "%" + 
+                "\nVotos brancos: " + porcentagemBrancos + "%" + 
+                "\nVotos nulos: " + porcentagemNulos + "%")
+            }
+        </script>
+    </body>
+</html>

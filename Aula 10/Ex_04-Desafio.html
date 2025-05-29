@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11 - Desafio para Tema de Casa</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa que leia o tipo sanguíneo de uma pessoa e se ela quer ser doador ou receptor. Através da tabela
+        a seguir, crie um algoritmo que informe ao usuário a sua compatibilidade sanguínea.
+    </h1>
+
+    <script>
+        window.onload = function (e) {
+            var tipoSanguineo = prompt("Insira o seu tipo sanguíneo: ")
+            var doadorOuReceptor = confirm("Gostaria de ser Doador?")
+
+            var tipoONegativo = ""
+            var tipoOPositivo = ""
+
+            var tipoBNegativo = ""
+            var tipoBPositivo = ""
+
+            var tipoANegativo = ""
+            var tipoAPositivo = ""
+
+            var tipoABNegativo = ""
+            var tipoABPositivo = ""
+
+            var tipoZPositivo = ""
+
+            if (tipoSanguineo == "O-"&& doadorOuReceptor == true) {
+                tipoSanguineo = "O- doa para todos os tipos sanguíneos"
+
+            } else if (tipoSanguineo == "O+" && doadorOuReceptor == true) {
+                tipoSanguineo = "O+ doa para os tipos sanguíneos: AB+ , A+ , B+ e O+"
+
+            } else if (tipoSanguineo == "B-" && doadorOuReceptor == true) {
+                tipoSanguineo = "B- doa para os tipos sanguíneos: AB+ , AB- , B+ e B-"
+
+            } else if (tipoSanguineo == "B+" && doadorOuReceptor == true) {
+                tipoSanguineo = "B+ doa para os tipos sanguíneos: AB+ e B+"
+
+            } else if (tipoSanguineo == "A-" && doadorOuReceptor == true) {
+                tipoSanguineo = "A- doa para os tipos sanguíneos: AB+ , AB- , A+ e A-+"
+
+            } else if (tipoSanguineo == "A+" && doadorOuReceptor == true) {
+                tipoSanguineo = "A+ doa para os tipos sanguíneos: AB+ e A+"
+
+            } else if (tipoSanguineo == "AB-" && doadorOuReceptor == true) {
+                tipoSanguineo = "AB- doa para os tipos sanguíneos: AB+ e AB-"
+
+            } else if (tipoSanguineo == "AB+" && doadorOuReceptor == true) {
+                tipoSanguineo = "AB+ doa para o tipo sanguíneo: AB+"
+
+            } else if (tipoSanguineo == "O-"&& doadorOuReceptor == false) {
+                tipoSanguineo = "O- recebe do tipo sanguíneo: O-"
+
+            } else if (tipoSanguineo == "O+" && doadorOuReceptor == false) {
+                tipoSanguineo = "O+ recebe dos tipos sanguíneos: O+ e O-"
+
+            } else if (tipoSanguineo == "B-" && doadorOuReceptor == false) {
+                tipoSanguineo = "B- recebe dos tipos sanguíneos: O- e B-"
+
+            } else if (tipoSanguineo == "B+" && doadorOuReceptor == false) {
+                tipoSanguineo = "B+ recebe dos tipos sanguíneos: O- , O+ , B- e B+"
+
+            } else if (tipoSanguineo == "A-" && doadorOuReceptor == false) {
+                tipoSanguineo = "A- recebe dos tipos sanguíneos: O- e A-"
+
+            } else if (tipoSanguineo == "A+" && doadorOuReceptor == false) {
+                tipoSanguineo = "A+ recebe dos tipos sanguíneos: O- , O+ , A- e A+ "
+
+            } else if (tipoSanguineo == "AB-" && doadorOuReceptor == false) {
+                tipoSanguineo = "AB- recebe dos tipos sanguíneos: O-, B- , A- e AB-"
+
+            } else if (tipoSanguineo == "AB+" && doadorOuReceptor == false) {
+                tipoSanguineo = "AB+ recebe de todos os tipos sanguíneos"
+            } else
+                tipoSanguineo = "Insira um tipo sanguíneo válido (verifique se digitou corretamente)"
+            alert(tipoSanguineo)
+        }
+    </script>
+</body>
+
+</html>

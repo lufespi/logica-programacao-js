@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 4 - Exercício 4</title>
+    </head>
+
+    <body>
+        <h1>
+            Crie um programa que leia a largura e a altura de uma parede. A seguir, calcule e mostre a área a ser pintada e a quantidade de tinta necessária para o serviço. Sabendo que cada litro de tinta, pinta uma área de 2 metros quadrados.
+        </h1>
+
+        <form>
+            <div>
+                <label>Insira a Largura da parede:</label>
+                <input type="text" id="largura" name="largura" value="">
+            </div>
+            <div>
+                <label>Insira a Altura da parede:</label>
+                <input type="text" id="altura" name="altura" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="calculo()">
+        </form>
+        
+        <script>
+            function calculo(){
+                var largura = document.getElementById("largura").value;
+                var altura = document.getElementById("altura").value;
+                var area = (largura * altura).toFixed(2);
+                var tinta = area * 2;
+
+                alert("Área a ser pintada: " + area + "m²" + 
+                "\nQuantidade de tinta necessária: " + tinta + " Litros")
+            }
+        </script>
+    </body>
+</html>

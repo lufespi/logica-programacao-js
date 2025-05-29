@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- Digitar "html:5 - Preenche automaticamente a estrutura base" -->
+
+<html lang="pt-BR">
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 3 - Exercício 2</title>
+    </head>
+
+    <body>
+        <h1>
+            Faça um programa que leia 3 notas de um aluno em uma disciplina e informe na tela a sua média na disciplina.
+            Ex:
+            Nota 1: 5.5
+            Nota 2: 6.0
+            Nota 3: 7.5
+            A média das notas 5.5, 6.0 e 7.5 é igual a: 6.33
+        </h1>
+        
+        <form>
+            <div>
+                <label>Informe a Nota 1:</label>
+                <input type="text" id="nota1" name="nota1" value="">
+            </div>
+            <div>
+                <label>Informe a Nota 2:</label>
+                <input type="text" id="nota2" name="nota2" value="">
+            </div>
+            <div>
+                <label>Informe a Nota 3:</label>
+                <input type="text" id="nota3" name="nota3" value="">
+            </div>
+            <input type="button" id="botao" name="botao" value="Calcular a Média" onclick="calcularMedia()">
+        </form>
+
+        <script>
+            function calcularMedia() {
+                var notaUm = parseFloat(document.getElementById("nota1").value);
+                var notaDois = document.getElementById("nota2").value;
+                var notaTres = document.getElementById("nota3").value;
+                var media = ((notaUm + parseFloat(notaDois) + parseFloat(notaTres)) / 3).toFixed(2); 
+                // parseFloat() - Converter uma string para número decimal
+                // toFixed() -  Limitar casas decimais totais do resultado da divisão
+                
+                alert("A média das notas " + notaUm + ", " + notaDois + " e " + notaTres + " é igual a: " + media + ".")
+            }
+        </script>
+    </body>
+</html>

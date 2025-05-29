@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10 - Exercício 1</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function (e) {
+            let nome = prompt("Qual é o seu nome?")
+            alert("Olá, boa tarde " + nome + "!")
+            let resposta = confirm("Vamos fazer um curso de desenvolvimento Web Front-End?")
+
+            if (resposta == true) {
+                alert("Que legal " + nome + ", vamos aprender CSS e HTML.")
+                console.log("Que legal " + nome + ", vamos aprender CSS e HTML.")
+                document.write("Que legal " + nome + ", vamos aprender CSS e HTML.")
+            } else {
+                alert("Que pena " + nome + ", vamos deixar para um próximo curso aprender CSS e HTML")
+                console.log("Que pena " + nome + ", vamos deixar para um próximo curso aprender CSS e HTML")
+                document.write("Que pena " + nome + ", vamos deixar para um próximo curso aprender CSS e HTML")
+            }
+        }
+    </script>
+</body>
+
+</html>

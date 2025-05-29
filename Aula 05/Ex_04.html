@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 6 - Exercício 4</title>
+    </head>
+
+    <body>
+        <h1>
+            Crie um programa para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dia e quantos anos ele já fumou.
+            Considere que um fumante perde 11 minutos de vida a cada cigarro.
+            Calcule quantos dias de vida um fumante perderá e exiba esse total de dias.
+        </h1>
+
+        <form>
+            <div>
+                <label>Quantidade de Cigarros fumados por dia:</label>
+                <input type="number" id="quantidadeCigarrosDia" name="" value="">
+            </div>
+            <div>
+                <label>Quantidade de Anos de uso:</label>
+                <input type="number" id="quantidadeAnosFumante" name="" value=""> 
+            </div>
+            <input type="button" id="calcular" name="calcular" value="Calcular" onclick="calcularValores()">
+        </form>
+
+        <script>
+            function calcularValores(){
+
+                var quantidadeCigarrosDia = document.getElementById("quantidadeCigarrosDia").value;
+                var quantidadeAnosFumante = document.getElementById("quantidadeAnosFumante").value;
+
+                var quantidadeDiasFumados = quantidadeAnosFumante * 365; // 365 = dias
+                var quantidadeTempoDia = quantidadeCigarrosDia * 11; // 11 = minutos
+                var quantidadeTempoPerdido = quantidadeDiasFumados * quantidadeTempoDia; // minutos
+                var quantidadeTempoPerdidoHora = quantidadeTempoPerdido / 60;
+                var quantidadeTempoPerdidoDias = (quantidadeTempoPerdidoHora / 24).toFixed(0);
+
+                alert("O fumante perderá " + quantidadeTempoPerdidoDias + " dias de Vida")
+            }
+        </script>
+    </body>
+</html>

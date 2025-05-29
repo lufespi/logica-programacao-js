@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 7 - Exercício 1</title>
+    </head>
+
+    <body>
+        <h1>
+            Escreva um algoritmo que leia dois valores e escreva qual valor é o maior deles. Caso sejam iguais, escreva o valor com a mensagem “Os valores são iguais”.
+        </h1>
+        
+        <form>
+            <div>
+                <label>Valor A:</label>
+                <input type="number" id="valorUm" name="" value="">
+            </div>
+            <div>
+                <label>Valor B:</label>
+                <input type="number" id="valorDois" name="" value="">
+            </div>
+            <input type="button" id="enviar" name="" value="Enviar" onclick="lerValores()">
+        </form>
+
+        <script>
+            function lerValores(){
+                var valorUm = document.getElementById("valorUm").value;
+                var valorDois = document.getElementById("valorDois").value;
+                var resultado = valorUm + valorDois;
+
+                if(valorUm > valorDois)
+                    resultado = "O Valor A é maior que o Valor B"
+                else if(valorUm < valorDois)
+                    resultado = "O Valor B é maior que o Valor A"
+                else if(valorUm == valorDois)
+                    resultado = "Os valores são Iguais"
+                alert(resultado)
+            }
+        </script>
+    </body>
+</html>

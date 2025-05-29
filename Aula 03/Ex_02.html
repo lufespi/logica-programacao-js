@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 4 - Exercício 2</title>
+    </head>
+
+    <body>
+        <h1>
+            Faça um algoritmo que leia o quanto de dinheiro uma pessoa possui em reais. Após, converta e mostre quantos dólares e euros ela pode comprar.
+            Considere os valores:
+            Dólar: 5,23
+            Euro: 5,15
+        </h1>
+
+        <form>
+            <label>Informe o valor em reais:</label>
+            <input type="text" id="inserirValor" name="inserirValor" value="">
+        </form>
+        <input type="button" id="enviar" name="enviar" value="Enviar" onclick="valores()">
+
+        <script>
+            function valores(){
+                var reais = document.getElementById("inserirValor").value;
+                var dolar = (reais / 5.23).toFixed(2);
+                var euro = (reais / 5.15).toFixed(2);
+
+                alert("Dólar: $" + dolar +
+                "\nEuro: €" + euro)
+            }
+        </script>
+    </body>
+</html>

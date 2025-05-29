@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11 - Exercício 1</title>
+</head>
+
+<body>
+    <h1>
+        Para participar de uma competição o candidato precisa ter idade maior ou igual a 18 anos e altura maior ou igual
+        a 1.70 m. Portanto, faça um programa que solicite a idade e a altura de um candidato, teste e exiba uma mensagem
+        informando se o mesmo está ou não apto para participar da competição.
+    </h1>
+
+    <form>
+        <div>
+            <label>Idade:</label>
+            <input type="number" id="idade" name="" value="">
+        </div>
+        <div>
+            <label>Altura:</label>
+            <input type="number" id="altura" name="" value="" placeholder="1.70 m">
+        </div>
+        <input type="button" id="botao" name="" value="Enviar" onclick="enviarDados()">
+    </form>
+
+    <script>
+        function enviarDados() {
+            var idade = document.getElementById("idade").value
+            var altura = document.getElementById("altura").value
+            var statusApto = ""
+
+            if (idade >= 18 && altura >= 1.7) {
+                statusApto = "O candidato está apto para participar da competição"
+            } else
+                statusApto = "O candidato NÃO está apto para participar da competição"
+            alert(statusApto)
+        }
+    </script>
+</body>
+
+</html>

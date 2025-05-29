@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8 - Exercício 1</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa que leia a velocidade de um veículo.
+        Caso ultrapasse 80 km/h, exiba uma mensagem informando que o condutor foi multado, incluindo o tipo de infração
+        e o valor da multa conforme a tabela abaixo:
+
+        Infração Média | Até 20% | RS 130,16
+        Infração Grave | Acima de 20% até 50% | RS 195,23
+        Infração Gravíssima | Acima de 50% | R$ 880,41
+    </h1>
+
+    <form>
+        <label>Velocidade do Veículo:</label>
+        <input type="number" id="velocidadeInserida" name="" value="" placeholder="Km/h">
+        <input type="button" id="botao" name="" value="Enviar" onclick="exibirValores()">
+    </form>
+
+    <script>
+        function exibirValores() {
+            var velocidadeInserida = parseFloat(document.getElementById("velocidadeInserida").value)
+            var infMedia = "Multado com Infração Média de R$130.16"
+            var infGrave = "Multado com Infração Grave de R$195.23"
+            var infGravissima = "Multado com Infração Gravíssima de R$880.41"
+            var infracao = "Sem Infração"
+
+            if (velocidadeInserida > 80) {
+                if (velocidadeInserida <= 96)
+                    infracao = infMedia
+                else if (velocidadeInserida <= 120)
+                    infracao = infGrave
+                else
+                    infracao = infGravissima
+            } else (velocidadeInserida <= 80)
+            alert(infracao)
+        }
+    </script>
+</body>
+
+</html>

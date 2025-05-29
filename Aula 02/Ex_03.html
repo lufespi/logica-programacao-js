@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 3 - Exercício 3</title>
+    </head>
+
+    <body>
+        <h1>
+            Faça um programa que leia um número inteiro e mostre o seu antecessor e o seu sucessor.
+            Ex:
+            Digite um número: 10
+            O antecessor de 10 é: 9
+            O sucessor de 10 é: 11
+        </h1>
+
+        <form>
+            <div>
+                <label>Digite um número:</label>
+                <input type="text" id="numero" name="numero" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="lerNumero()">
+        </form>
+
+        <script>
+            function lerNumero(){
+                var valor = parseFloat(document.getElementById("numero").value);
+                var antecessor = valor - 1;
+                var sucessor = valor + 1;
+
+                alert("O antecessor de " + valor + " é: " + antecessor +
+                "\nO sucessor de " + valor + " é: " + sucessor + ".")
+            }
+        </script>
+    </body>
+</html>

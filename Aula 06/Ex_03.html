@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Aula 7 - Exercício 3</title>
+</head>
+
+<body>
+    <h1>
+        Crie um programa para ler 3 valores (considere que não serão informados valores iguais) e escreva o maior deles.
+    </h1>
+
+    <form>
+        <div>
+            <label>Valor A:</label>
+            <input type="number" id="valorUm" name="valorUm" value="">
+        </div>
+        <div>
+            <label>Valor B:</label>
+            <input type="number" id="valorDois" name="valorDois" value="">
+        </div>
+        <div>
+            <label>Valor C:</label>
+            <input type="number" id="valorTres" name="valorTres" value="">
+        </div>
+        <input type="button" id="botao" name="botao" value="Comparar" onclick="compararValores()">
+    </form>
+
+    <script>
+        function compararValores() {
+            var valorA = parseFloat(document.getElementById("valorUm").value);
+            var valorB = parseFloat(document.getElementById("valorDois").value);
+            var valorC = parseFloat(document.getElementById("valorTres").value);
+
+            var resultado = ""
+
+            if (valorA > valorB & valorA > valorC)
+                resultado = "VALOR A"
+            else if (valorB > valorA & valorB > valorC)
+                resultado = "VALOR B"
+            else
+                resultado = "VALOR C"
+
+            alert(resultado)
+        }
+    </script>
+</body>
+
+</html>

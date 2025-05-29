@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 11 - Exercício 3</title>
+</head>
+
+<body>
+    <h1>
+        Para doar sangue é necessário seguir os seguintes requisitos básicos:
+
+        » Ter entre 16 e 69 anos (Pessoas com idade entre 60 e 69 anos só poderão doar sangue se já o tiverem feito
+        antes dos 60 anos);
+        » Pesar no mínimo 50kg;
+        » Ter dormido pelo menos 6 horas nas últimas 24 horas;
+        » Estar alimentado.
+
+        Crie um algoritmo que leia os requisitos acima e informe ao usuário se ele pode ou não doar sangue.
+    </h1>
+
+    <script>
+        window.onload = function (e) {
+            var nome = prompt("Insira seu nome:")
+            alert("Olá " + nome + "!" + "\n" +
+                "\nPara doar sangue é necessário seguir os seguintes requisitos básicos:" + "\n" +
+                "\n» Ter entre 16 e 69 anos (Pessoas com idade entre 60 e 69 anos só poderão doar sangue se já o tiverem feito antes dos 60 anos);" +
+                "\n» Pesar no mínimo 50kg;" +
+                "\n» Ter dormido pelo menos 6 horas nas últimas 24 horas;" +
+                "\n » Estar alimentado.")
+            var idade = prompt("Qual é a sua idade?")
+            var peso = prompt("Qual é o seu peso?")
+            var tempoSono = prompt("Quantas horas de sono você dormiu nas últimas 24 horas?")
+            var alimentacao = confirm("Está bem alimentado?")
+            var jaDoouSangue = confirm("Já doou sangue antes?")
+            var statusDoacao = ""
+
+            if (idade >= 16 && idade <= 59 && peso >= 50 && tempoSono >= 6 && alimentacao == true) {
+                statusDoacao = "Você está apto para doar sangue"
+            } else if (idade >= 60 && idade <= 69 && peso >= 50 && tempoSono >= 6 && alimentacao == true && jaDoouSangue == true) {
+                statusDoacao = "Você está apto para doar sangue"
+            } else {
+                statusDoacao = "Você NÃO está apto para doar sangue"
+            }
+            alert(statusDoacao)
+        }
+    </script>
+</body>
+
+</html>

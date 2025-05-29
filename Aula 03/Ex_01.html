@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 4 - Exercício 1</title>
+    </head>
+
+    <body>
+        <h1>
+            Escreva um algoritmo que leia e armazene um valor para a variável A e outro valor para a variável B. 
+            Exiba um alerta com os valores de A e B informados.
+            A seguir (utilizando apenas atribuições entre variáveis) troque os seus conteúdos fazendo com que o valor que está em A passe para B e vice-versa.
+            Ao final, exiba um outro alerta com os valores que ficaram armazenados nas variáveis A e B.
+            Ex:
+            A = 10
+            B = 20
+            O valor de A é 10 e o valor de B é: 20
+            O valor de A é 20 e o valor de B é: 10
+        </h1>
+
+        <form>
+            <div>
+                <label>Insira o valor A</label>
+                <input type="text" id="inserirValorA" name="inserirValorA" value="">
+            </div>
+            <div>
+                <label>Insira o valor B</label>
+                <input type="text" id="inserirValorB" name="inserirValorB" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="valores()">
+        </form>
+
+        <script>
+            function valores(){
+            var valorA = document.getElementById("inserirValorA").value;
+            var valorB = document.getElementById("inserirValorB").value;
+            var valorC = valorB;
+
+            alert("A = " + valorA +
+            "\nB = " + valorB + 
+            "\nO valor de A é " + valorA + " e o valor de B é: " + valorB + 
+            "\nO valor de A é " + valorC + " e o valor de B é: " + valorA)
+            }
+        </script>
+    </body>
+</html>

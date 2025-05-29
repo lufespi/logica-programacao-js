@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8 - Exercício 3</title>
+</head>
+
+<body>
+    <h1>
+        Desenvolva um programa que leia o nome de um funcionário, seu salário e quantos anos ele trabalha na empresa.
+        Calcule e mostre seu novo salário, reajustado de acordo com a tabela a seguir:
+        Até 3 anos de empresa | Aumento de 3%
+        Acima de 3 até 10 anos | Aumento de 6%
+        Acima de 10 anos | Aumento de 12%
+    </h1>
+
+    <form>
+        <div>
+            <label>Nome:</label>
+            <input type="text" id="nomeFuncionario" name="" value="">
+        </div>
+        <div>
+            <label>Salário:</label>
+            <input type="number" id="salarioAtual" name="" value="">
+        </div>
+        <div>
+            <label>Tempo na Empresa:</label>
+            <input type="number" id="tempoEmpresa" name="" value="" placeholder="Em anos">
+        </div>
+        <input type="button" id="enviar" name="" value="Calcular" onclick="calcularReajuste()">
+    </form>
+
+    <script>
+        function calcularReajuste() {
+            var nomeFuncionario = document.getElementById("nomeFuncionario").value
+            var salarioAtual = parseFloat(document.getElementById("salarioAtual").value)
+            var tempoEmpresa = parseFloat(document.getElementById("tempoEmpresa").value)
+
+            var reajuste = "O funcionário não recebeu um reajuste de salário"
+            var aumentoTres = "O funcionário recebeu um aumento de 3%"
+            var aumentoSeis = "O funcionário recebeu um aumento de 6%"
+            var aumentoDoze = "O funcionário recebeu um aumento de 12%"
+            var porcentagem = 0
+            var salarioTotal = 0
+
+            if (tempoEmpresa <= 3) {
+                reajuste = aumentoTres
+                porcentagem = 3
+                salarioTotal = salarioAtual + salarioAtual * (porcentagem / 100)
+            } else if (tempoEmpresa <= 10) {
+                reajuste = aumentoSeis
+                porcentagem = 6
+                salarioTotal = salarioAtual + salarioAtual * (porcentagem / 100)
+            } else {
+                reajuste = aumentoDoze
+                porcentagem = 12
+                salarioTotal = salarioAtual + salarioAtual * (porcentagem / 100)
+            }
+            alert("Nome do Funcionário: " + nomeFuncionario +
+                "\nSalário Atual: R$ " + salarioAtual + 
+                "\nTempo na Empresa: " + tempoEmpresa + " anos" +
+                "\nSalário reajustado em: " + porcentagem + "%" + 
+                "\nNovo Salário: R$ " + salarioTotal)
+        }
+    </script>
+</body>
+
+</html>

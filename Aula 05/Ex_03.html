@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 6 - Exercício 3</title>
+    </head>
+
+    <body>
+        <h1>
+            Crie um programa para ler 3 notas de um aluno. Calcular a média aritmética e escrever uma mensagem que diga se o aluno foi ou não aprovado.
+            (Considerar que nota maior ou igual a 6 o aluno é aprovado).
+            Escrever também a média calculada.
+        </h1>
+
+        <form>
+            <div>
+                <label>Nota 1:</label>
+                <input type="number" id="notaUm" name="notaUm" value="">
+            </div>
+            <div>
+                <label>Nota 2:</label>
+                <input type="number" id="notaDois" name="notaDois" value="">
+            </div>
+            <div>
+                <label>Nota 3:</label>
+                <input type="number" id="notaTres" name="notaTres" value="">
+            </div>
+            <input type="button" id="calcular" name="calcular" value="Calcular Média" onclick="calcularMedia()">
+        </form>
+
+        <script>
+            function calcularMedia(){
+                var notaUm = parseFloat(document.getElementById("notaUm").value);
+                var notaDois = parseFloat(document.getElementById("notaDois").value);
+                var notaTres = parseFloat(document.getElementById("notaTres").value);
+                var media = (notaUm + notaDois + notaTres) / 3;
+
+                if(media >= 6)
+                    alert("O aluno foi APROVADO")
+                else 
+                    alert("O aluno foi REPROVADO")
+            }
+        </script>
+    </body>
+</html>

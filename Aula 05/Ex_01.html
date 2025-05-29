@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aula 6 - Exercício 1</title>
+    </head>
+
+    <body>
+        <h1>
+            Crie um algoritmo que leia um determinado valor, após exiba na tela se este é par ou ímpar.
+        </h1>
+
+        <label>Insira um valor:</label>
+        <input type="number" id="valor" name="valor" value="">
+        <input type="button" id="enviar" name="enviar" value="Calcular" onclick="calcularParImpar()"> 
+        <!-- CRTL + ESPAÇO = abrir sugestão de códigos -->
+
+        <script>
+            function calcularParImpar(){
+                var valorInformado = document.getElementById("valor").value;
+                /* "%" = Resto da Divisão
+                    10 % 2 == 0
+                    11 % 2 == 1
+                    12 % 2 == 0
+                    13 % 2 == 1
+                    == = Igual
+                    != Diferente */
+                if(valorInformado % 2 == 0)
+                    alert("O valor " + valorInformado + " é PAR")
+                else
+                    alert("O valor " + valorInformado + " é ÍMPAR")
+            }
+        </script>
+    </body>
+</html>

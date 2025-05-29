@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 3 - Exercício 5</title>
+    </head>
+
+    <body>
+        <h1 class="enunciado">
+            Desenvolva um programa que leia uma distância em metros e mostre os valores relativos em outras unidades de medidas.
+            Ex:
+            Informe uma distância em metros: 1000
+            A distância de 1000 metros corresponde a:
+            1 km
+            10 hm
+            100 dam
+            10000 dm
+            100000 cm
+            1000000 mm
+        </h1>
+
+        <form>
+            <div class="Informar">
+                <label>Informe a distância em metros:</label>
+                <input type="text" id="valorMetros" name="valorMetros" value="">
+            </div>
+            <input type="button" id="enviar" name="enviar" value="Enviar" onclick="lerValores()">
+        </form>
+
+        <script>
+            function lerValores(){
+                var valor = parseFloat(document.getElementById("valorMetros").value)
+                var km = valor / 1000;
+                var hm = valor / 100;
+                var dam = valor / 10;
+                var dm = valor * 10;
+                var cm = valor * 100;
+                var mm = valor * 1000;
+
+                alert("A distância de " + valor + " metros, corresponde a: " + 
+                "\n" + km + " km" + 
+                "\n" + hm + " hm" + 
+                "\n" + dam + " dam" + 
+                "\n" + dm + " dm" + 
+                "\n" + cm + " cm" + 
+                "\n" + mm + " mm")
+            }
+        </script>
+    </body>
+</html>
